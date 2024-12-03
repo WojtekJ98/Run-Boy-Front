@@ -74,11 +74,11 @@ export default function CategoryShoe() {
     <CenterWrapper>
       <Center>
         <ShoeContainer $image="/img/men_category.webp">
-          <StyledTittleH2>Men's Shoes</StyledTittleH2>
+          <StyledTittleH2>Men&apos;s Shoes</StyledTittleH2>
           <SeeMoreBtn text="See more →" link="/products?category=Men" />
         </ShoeContainer>
         <ShoeContainer $image="/img/women_category.webp">
-          <StyledTittleH2>Women's Shoes</StyledTittleH2>
+          <StyledTittleH2>Women&apos;s Shoes</StyledTittleH2>
           <SeeMoreBtn text="See more →" link="/products?category=Women" />
         </ShoeContainer>
       </Center>

@@ -146,7 +146,7 @@ export default function SingleProduct({ product, categories }) {
             <StyledProductInfo>
               <div>
                 <h1>{product.name}</h1>
-                <h2>{selectCategory(product)}'s Running Shoes</h2>
+                <h2>{selectCategory(product)}&apos;s Running Shoes</h2>
                 <h3>Brand: {product.properties.brand}</h3>
               </div>
               <StyledPrice>{formatMoney(product.price)}</StyledPrice>

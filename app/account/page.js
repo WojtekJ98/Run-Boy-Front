@@ -81,7 +81,7 @@ export default function AccountPage() {
     <Layout>
       <CenterWrapper>
         <Wrapper>
-          <h1>{session?.user.name}'s Account</h1>
+          <h1>{session?.user.name}&apos;s Account</h1>
           <div>
             <StyledSubTitle>Your Favorite Products</StyledSubTitle>
             <FavoriteItemWrapper />

@@ -11,17 +11,16 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
 });
 
 // Disable the default body parser
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
-
-const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET;
+// export const config = {
+//   api: {
+//     bodyParser: false,
+//   },
+// };
 
 export async function POST(req) {
   const buf = await req.text();
   const sig = req.headers.get("stripe-signature");
+  const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET;
 
   let event;
   try {

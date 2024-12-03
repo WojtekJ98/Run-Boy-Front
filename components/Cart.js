@@ -143,7 +143,7 @@ export default function Cart({ users, products }) {
       <header>
         <div>
           <Image src={Logo} alt="Logo of Run Boy" width={100} height={75} />
-          <span>{session?.user.name}'s Cart</span>
+          <span>{session?.user.name}&apos;s Cart</span>
         </div>
         <button onClick={closeCart}>close</button>
       </header>
