@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { formatDate } from "@/app/lib/formatDate";
 import Image from "next/image";
 import formatMoney from "@/app/lib/formatMoney";
+import LoadingSpiner from "./LoadingSpiner";
 const StyledContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -116,7 +117,7 @@ export default function UserOrders({ user }) {
   if (loading || !orders) {
     return (
       <div>
-        <h3>Loading orders...</h3>
+        <LoadingSpiner />{" "}
       </div>
     );
   }

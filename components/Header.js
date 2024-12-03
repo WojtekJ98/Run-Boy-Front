@@ -158,7 +158,7 @@ export default function Header() {
       <StyledNav>
         <NavLink href={"/"}>Home</NavLink>
         <NavLink href={"/products"}>Products</NavLink>
-        <NavLink href={"/blog"}>Blog</NavLink>
+        {/* <NavLink href={"/blog"}>Blog</NavLink> */}
         <NavLink href={"/contact"}>Contact</NavLink>
         {session ? (
           <>
@@ -198,7 +198,7 @@ export default function Header() {
         <StyledNavMobile>
           <NavLink href={"/"}>Home</NavLink>
           <NavLink href={"/products"}>Products</NavLink>
-          <NavLink href={"/blog"}>Blog</NavLink>
+          {/* <NavLink href={"/blog"}>Blog</NavLink> */}
           <NavLink href={"/contact"}>Contact</NavLink>
           {session ? (
             <>

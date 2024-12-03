@@ -2,6 +2,7 @@
 import CenterWrapper from "@/components/CenterWrapper";
 import FavoriteItemWrapper from "@/components/FavoriteItemWrapper";
 import Layout from "@/components/Layout";
+import LoadingSpiner from "@/components/LoadingSpiner";
 import UserOrders from "@/components/UserOrders";
 import { useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
@@ -91,7 +92,9 @@ export default function AccountPage() {
             {session?.user?.id ? (
               <UserOrders user={session.user.id} />
             ) : (
-              <p>Loading user data...</p>
+              <div>
+                <LoadingSpiner />
+              </div>
             )}
           </div>
           {showModal && (

@@ -9,6 +9,7 @@ import { useRouter, useSearchParams, usePathname } from "next/navigation";
 import SortComponent from "./SortComponent";
 import ProductPageSlider from "./ProductPageSlider";
 import FilterMobile from "./FilterMobile";
+import LoadingSpiner from "./LoadingSpiner";
 const WrapperGrid = styled.div`
   width: 100%;
   display: grid;
@@ -316,7 +317,9 @@ export default function ProductsPage({ products, categories }) {
                 </StyledSort>
                 <WrapperGrid>
                   {loading ? (
-                    <p>Loading... </p>
+                    <div>
+                      <LoadingSpiner />
+                    </div>
                   ) : (
                     filterdProducts.map((product, index) => (
                       <ProductCardAllProducts product={product} key={index} />

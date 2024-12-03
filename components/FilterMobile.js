@@ -17,6 +17,9 @@ const StyledFilterBtn = styled.button`
   &:hover {
     background-color: white;
   }
+  @media (min-width: 850px) {
+    display: none;
+  }
 `;
 
 const StyledFilterContainer = styled.div`

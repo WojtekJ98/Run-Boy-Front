@@ -2,6 +2,7 @@ import { useSession } from "next-auth/react";
 import { useCallback, useEffect, useState } from "react";
 import ProductCardFavorite from "./ProductCardFavorite";
 import styled from "styled-components";
+import LoadingSpiner from "./LoadingSpiner";
 
 const StyledFlexWrapper = styled.div`
   display: flex;
@@ -46,7 +47,11 @@ export default function FavoriteItemList({ products }) {
     .filter(Boolean);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <div>
+        <LoadingSpiner />
+      </div>
+    );
   }
 
   if (userFavoriteItems.length === 0) {

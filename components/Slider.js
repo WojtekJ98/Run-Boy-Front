@@ -137,7 +137,7 @@ export default function SliderMain() {
             </SlideContent>
           </SwiperSlide>
           <SwiperSlide>
-            <SlideContent $image="/img/slider_4.webp">
+            <SlideContent $image="/img/slider_4.jpg">
               <WrapperContent className={isAnimating ? "fade-in" : ""}>
                 <h1>Running: Freedom in Every Step</h1>
                 <h2>
