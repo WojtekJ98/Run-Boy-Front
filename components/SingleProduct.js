@@ -200,7 +200,7 @@ export default function SingleProduct({ product, categories }) {
               <BtnWrapper>
                 <AddtoCartBtn selectSize={selectSize} product={product._id} />
                 <CustomBtnAddToFavorite>
-                  <BtnAddToFavorite />
+                  <BtnAddToFavorite product={product} />
                 </CustomBtnAddToFavorite>
               </BtnWrapper>
             </StyledProductInfo>
@@ -211,17 +211,17 @@ export default function SingleProduct({ product, categories }) {
         <div>
           <BoxProductDetails>
             <div>
-              <Image src={Color} width={50} height={50} />
+              <Image src={Color} alt="Color icon" width={50} height={50} />
               <p>Color: </p>
               <span>{product.properties.color}</span>
             </div>
             <div>
-              <Image src={Run} width={50} height={50} />
+              <Image src={Run} alt="Purpose icon" width={50} height={50} />
               <p>Purpose: </p>
               <span>{product.properties.purpose}</span>
             </div>
             <div>
-              <Image src={Road} width={50} height={50} />
+              <Image src={Road} alt="Surface icon" width={50} height={50} />
               <p>Surface:</p>
               <span> {product.properties.surface}</span>
             </div>

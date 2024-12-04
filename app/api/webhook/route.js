@@ -38,8 +38,7 @@ export async function POST(req) {
     case "checkout.session.completed":
       const session = event.data.object;
       console.log("Checkout session completed!");
-      // You can now access the metadata here
-      // Perform your business logic here
+
       const { userId, inputs, cartDetails } = session.metadata;
       console.log("Session metadata:", session.metadata);
 
@@ -76,7 +75,6 @@ export async function POST(req) {
         console.log("Order created and cart cleared successfully!");
       } catch (error) {
         console.error("Error processing order and clearing cart:", error);
-        // Rollback transaction in case of error
         if (sessionTransaction) {
           await sessionTransaction.abortTransaction();
           sessionTransaction.endSession();
@@ -87,7 +85,6 @@ export async function POST(req) {
     case "payment_intent.succeeded":
       const paymentIntent = event.data.object;
       console.log("PaymentIntent was successful!");
-      // Perform your business logic here
       break;
     case "payment_intent.payment_failed":
       const failedPaymentIntent = event.data.object;
@@ -95,13 +92,10 @@ export async function POST(req) {
         "PaymentIntent failed:",
         failedPaymentIntent.last_payment_error?.message
       );
-      // Perform your business logic here
       break;
-    // ... handle other event types
     default:
       console.log(`Unhandled event type ${event.type}`);
   }
 
-  // Return a response to acknowledge receipt of the event
   return NextResponse.json({ received: true });
 }

@@ -145,7 +145,6 @@ export default function SliderMain() {
                 alt="Running: Freedom in Every Step"
                 fill
                 objectFit="cover"
-                priority={false}
               />
               <WrapperContent className={isAnimating ? "fade-in" : ""}>
                 <h1>Running: Freedom in Every Step</h1>
@@ -163,7 +162,6 @@ export default function SliderMain() {
                 alt="Elevate Your Run with Hoka"
                 fill
                 objectFit="cover"
-                priority={false}
               />
               <WrapperContent className={isAnimating ? "fade-in" : ""}>
                 <h1>Elevate Your Run with Hoka</h1>
@@ -182,7 +180,6 @@ export default function SliderMain() {
                 alt="Every Run Has a Story<"
                 fill
                 objectFit="cover"
-                priority={false}
               />
               <WrapperContent className={isAnimating ? "fade-in" : ""}>
                 <h1>Every Run Has a Story</h1>

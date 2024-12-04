@@ -9,6 +9,9 @@ const StyledFlexWrapper = styled.div`
   flex-wrap: wrap;
   gap: 1rem;
   align-items: center;
+  @media (max-width: 480px) {
+    justify-content: center;
+  }
 `;
 
 export default function FavoriteItemList({ products }) {

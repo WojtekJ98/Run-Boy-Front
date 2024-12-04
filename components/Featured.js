@@ -91,7 +91,7 @@ const Title = styled.h3`
   margin-bottom: 10px;
 `;
 const Text = styled.p`
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   color: #555;
 `;
 

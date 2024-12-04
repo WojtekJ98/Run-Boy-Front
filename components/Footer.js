@@ -101,6 +101,10 @@ const NavButton = styled.button`
   display: flex;
   gap: 0.5rem;
   align-items: center;
+  @media (max-width: 450px) {
+    justify-content: center;
+    align-items: center;
+  }
 `;
 export default function Footer() {
   const { data: session, status } = useSession();

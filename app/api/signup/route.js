@@ -17,15 +17,15 @@ export async function POST(req) {
         { status: 409 }
       );
     }
-    if (
-      !existingUser ||
-      !(await bcrypt.compare(password, existingUser.password))
-    ) {
-      return NextResponse.json(
-        { error: "Invalid email or password" },
-        { status: 401 }
-      );
-    }
+    // if (
+    //   !existingUser ||
+    //   !(await bcrypt.compare(password, existingUser.password))
+    // ) {
+    //   return NextResponse.json(
+    //     { error: "Invalid email or password" },
+    //     { status: 401 }
+    //   );
+    // }
     const hashedPassword = await bcrypt.hash(password, 10);
 
     const UserDoc = await User.create({
