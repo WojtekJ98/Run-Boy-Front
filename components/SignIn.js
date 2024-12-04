@@ -42,7 +42,7 @@ export default function SignIn() {
           draggable: true,
           progress: undefined,
         });
-        router.push("/");
+        router.push("/account");
       } else {
         const errorMessage = getErrorMessage(result?.error);
 
@@ -71,9 +71,7 @@ export default function SignIn() {
       resetForm();
     }
   }
-  if (session) {
-    return <p>Already signed in</p>;
-  }
+
   return (
     <Form onSubmit={handleSubmit}>
       <h2>Sign Into Your Account</h2>

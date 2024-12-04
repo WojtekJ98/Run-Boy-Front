@@ -125,7 +125,7 @@ export default function SliderMain() {
           loop={true}
           onSlideChange={handleSlideChange}>
           <SwiperSlide>
-            <SlideContent $image="/img/slider_2.jpg">
+            <SlideContent $image="/img/slider_2.webp">
               <WrapperContent className={isAnimating ? "fade-in" : ""}>
                 <h1>Fuel Your Run with Nike</h1>
                 <h2>
@@ -137,7 +137,7 @@ export default function SliderMain() {
             </SlideContent>
           </SwiperSlide>
           <SwiperSlide>
-            <SlideContent $image="/img/slider_4.jpg">
+            <SlideContent $image="/img/slider_4.webp">
               <WrapperContent className={isAnimating ? "fade-in" : ""}>
                 <h1>Running: Freedom in Every Step</h1>
                 <h2>
@@ -148,7 +148,7 @@ export default function SliderMain() {
             </SlideContent>
           </SwiperSlide>
           <SwiperSlide>
-            <SlideContent $image="/img/slider_3.jpg">
+            <SlideContent $image="/img/slider_3.webp">
               <WrapperContent className={isAnimating ? "fade-in" : ""}>
                 <h1>Elevate Your Run with Hoka</h1>
                 <h2>
@@ -160,7 +160,7 @@ export default function SliderMain() {
             </SlideContent>
           </SwiperSlide>
           <SwiperSlide>
-            <SlideContent $image="/img/slider_5.jpg">
+            <SlideContent $image="/img/slider_5.webp">
               <WrapperContent className={isAnimating ? "fade-in" : ""}>
                 <h1>Every Run Has a Story</h1>
                 <h2>
