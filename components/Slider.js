@@ -142,7 +142,7 @@ export default function SliderMain() {
             <SlideContent>
               <StyledImage
                 src="/img/slider_3.webp"
-                alt="Fuel Your Run with Nike"
+                alt="Running: Freedom in Every Step"
                 fill
                 objectFit="cover"
                 priority={false}
@@ -160,7 +160,7 @@ export default function SliderMain() {
             <SlideContent>
               <StyledImage
                 src="/img/slider_4.webp"
-                alt="Fuel Your Run with Nike"
+                alt="Elevate Your Run with Hoka"
                 fill
                 objectFit="cover"
                 priority={false}
@@ -179,7 +179,7 @@ export default function SliderMain() {
             <SlideContent>
               <StyledImage
                 src="/img/slider_5.webp"
-                alt="Fuel Your Run with Nike"
+                alt="Every Run Has a Story<"
                 fill
                 objectFit="cover"
                 priority={false}
