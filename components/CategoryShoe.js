@@ -12,6 +12,9 @@ const Center = styled.div`
   @media (max-width: 1100px) {
     justify-content: space-between;
   }
+  @media (max-width: 650px) {
+    display: block;
+  }
 `;
 const ShoeContainer = styled.div`
   height: 280px;
@@ -31,9 +34,10 @@ const ShoeContainer = styled.div`
   background-position: bottom;
   background-repeat: no-repeat;
   opacity: 0.8;
-  @media (max-width: 1100px) {
-    /* height: 280px;
-    width: 450px; */
+  @media (max-width: 650px) {
+    width: 100%;
+    justify-self: center;
+    margin: 1rem 0;
   }
   &:hover {
     opacity: 1;

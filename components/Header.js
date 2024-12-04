@@ -144,9 +144,6 @@ export default function Header() {
     (item) => item.user === session?.user?.id
   );
 
-  console.log(cartItems);
-  console.log(userFavoriteItems);
-
   return (
     <StyledHeader>
       <LogoWrapper>

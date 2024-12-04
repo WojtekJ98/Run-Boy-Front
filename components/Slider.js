@@ -9,6 +9,7 @@ import "swiper/css/navigation";
 
 import styled, { css, keyframes } from "styled-components";
 import { useState } from "react";
+import Image from "next/image";
 
 const fadeIn = keyframes`
   from {
@@ -41,35 +42,23 @@ const StyledSwiper = styled(Swiper)`
     color: #ddd;
   }
 `;
-const SlideContent = styled.div.withConfig({
-  shouldForwardProp: (prop) => prop !== "$image",
-})`
-  /* position: relative; */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+const SlideContent = styled.div`
+  position: relative;
   width: 100%;
   height: 500px;
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  color: #fff;
-  font-size: 24px;
-  font-weight: bold;
-  ${({ $image }) =>
-    css`
-      background-image: url(${$image});
-    `}
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  @media (min-width: 1600px) {
-    height: 600px;
+  @media (max-width: 768px) {
+    height: 500px;
   }
 `;
-const test = styled.div`
-  width: 100%;
-  height: 400px;
+const StyledImage = styled(Image)`
+  @media (max-width: 480px) {
+    object-position: 70% center;
+  }
 `;
 const WrapperContent = styled.div`
+  position: absolute;
+  bottom: 5px;
   height: 100%;
   padding: 1rem;
   width: 100%;
@@ -78,6 +67,7 @@ const WrapperContent = styled.div`
   justify-content: end;
   gap: 1rem;
   padding-bottom: 3rem;
+  color: white;
 
   h1,
   h2,
@@ -89,10 +79,16 @@ const WrapperContent = styled.div`
     margin: 2px;
     font-size: 2rem;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    @media (max-width: 600px) {
+      font-size: 1.2rem;
+    }
   }
   h2 {
     font-size: 1.5rem;
     margin: 2px;
+    @media (max-width: 600px) {
+      font-size: 1rem;
+    }
   }
   button {
     margin-left: 3rem;
@@ -125,7 +121,13 @@ export default function SliderMain() {
           loop={true}
           onSlideChange={handleSlideChange}>
           <SwiperSlide>
-            <SlideContent $image="/img/slider_2.webp">
+            <SlideContent>
+              <Image
+                src="/img/slider_2.webp"
+                alt="Fuel Your Run with Nike"
+                fill
+                objectFit="cover"
+              />
               <WrapperContent className={isAnimating ? "fade-in" : ""}>
                 <h1>Fuel Your Run with Nike</h1>
                 <h2>
@@ -137,7 +139,14 @@ export default function SliderMain() {
             </SlideContent>
           </SwiperSlide>
           <SwiperSlide>
-            <SlideContent $image="/img/slider_4.webp">
+            <SlideContent>
+              <StyledImage
+                src="/img/slider_3.webp"
+                alt="Fuel Your Run with Nike"
+                fill
+                objectFit="cover"
+                priority={false}
+              />
               <WrapperContent className={isAnimating ? "fade-in" : ""}>
                 <h1>Running: Freedom in Every Step</h1>
                 <h2>
@@ -148,7 +157,14 @@ export default function SliderMain() {
             </SlideContent>
           </SwiperSlide>
           <SwiperSlide>
-            <SlideContent $image="/img/slider_3.webp">
+            <SlideContent>
+              <StyledImage
+                src="/img/slider_4.webp"
+                alt="Fuel Your Run with Nike"
+                fill
+                objectFit="cover"
+                priority={false}
+              />
               <WrapperContent className={isAnimating ? "fade-in" : ""}>
                 <h1>Elevate Your Run with Hoka</h1>
                 <h2>
@@ -160,7 +176,14 @@ export default function SliderMain() {
             </SlideContent>
           </SwiperSlide>
           <SwiperSlide>
-            <SlideContent $image="/img/slider_5.webp">
+            <SlideContent>
+              <StyledImage
+                src="/img/slider_5.webp"
+                alt="Fuel Your Run with Nike"
+                fill
+                objectFit="cover"
+                priority={false}
+              />
               <WrapperContent className={isAnimating ? "fade-in" : ""}>
                 <h1>Every Run Has a Story</h1>
                 <h2>
