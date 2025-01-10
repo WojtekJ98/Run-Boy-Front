@@ -1,36 +1,28 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Run-Boy-Front
 
-## Getting Started
+## Project Overview
+Run-Boy-Front is the customer-facing e-commerce website connected to Run-Boy-Panel. The page shows products added to the Run-Boy-Panel. 
 
-First, run the development server:
+## What This Application Does
+Run-Boy-Front is a user-facing e-commerce platform designed to provide a seamless shopping experience. It allows users to:
+- Browse and filter products by categories such as size, brand, and color.
+- Add products to their cart or favorites.
+- Sign up, sign in, and manage their accounts.
+- Place orders and securely complete payments via Stripe integration.
+- View their order history in their account dashboard.
+  
+## Features
+- **Product Browsing**:
+  - Dynamic product filtering by size, brand, and other properties.
+- **User Authentication**:
+  - Sign-up and sign-in options.
+  - Add products to favorites or cart.
+- **Order Placement**:
+  - Stripe integration for secure payments.
+  - View order history in the user account page post-payment.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Live Demo
+[Run-Boy-Front](https://run-boy-front.vercel.app/)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Visual Walkthrough
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
