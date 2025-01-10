@@ -13,13 +13,13 @@ export async function POST(req) {
   let transporter = nodemailer.createTransport({
     host: SMTP_SERVER_HOST,
     port: SMTP_SERVER_PORT,
-    secure: false, // Use true for port 465
+    secure: false, 
     auth: {
       user: SMTP_SERVER_USERNAME,
       pass: SMTP_SERVER_PASSWORD,
     },
     tls: {
-      rejectUnauthorized: false, // Allow self-signed certificates
+      rejectUnauthorized: false, 
     },
   });
 
